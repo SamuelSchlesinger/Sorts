@@ -1,0 +1,9 @@
+Hello humans.
+
+I compiled this on OpenJDK for Ubuntu.
+It let me do this, though it yelled at me for "unsafe operations".
+Your compiler may not accept this. 
+There's probably an option to get around it.
+
+Cheers,
+Sam
