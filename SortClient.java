@@ -15,6 +15,7 @@ public class SortClient {
             System.out.println("         -m (merge sort)");
             System.out.println("         -s (selection sort");
             System.out.println("         -h (heap sort)");
+            System.out.println("         -q (quicksort)");
             return;
         } else {
             Integer[] A =  random(Integer.parseInt(args[0]));
@@ -44,6 +45,10 @@ public class SortClient {
 		            test[i-1] = new HeapSort(copy(A));
 			    test_types[i-1] = "Heap";
 			    break;
+                        case 'q': 
+                            test[i-1] = new Quicksort(copy(A));
+                            test_types[i-1] = "Quick";
+                            break;
 			default:
 			    test[i-1] = new HeapSort(copy(A));
 			    test_types[i-1] = "Heap";
@@ -72,7 +77,7 @@ public class SortClient {
     private static Integer[] random(int N) {   
         Integer[] A = new Integer[N];
         for (int i = 0; i < A.length; i++) {
-            A[i] = rand.nextInt(); 
+            A[i] = rand.nextInt(100); 
         }
         return A;
     }
